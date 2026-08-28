@@ -220,31 +220,6 @@ document.getElementById('searchInput').addEventListener('keyup', function () {
     });
 });
 
-const params=new URLSearchParams(window.location.search);
-
-const date=params.get("date");
-
-const data=JSON.parse(localStorage.getItem(date));
-
-let html="";
-
-if(data){
-
-html+=`
-<div class="row"><label>Project :</label> ${data.project}</div>
-<div class="row"><label>Name :</label> ${data.employee}</div>
-<div class="row"><label>Date :</label> ${data.date}</div>
-<div class="row"><label>Task :</label> ${data.task}</div>
-<div class="row"><label>Summary :</label> ${data.summary}</div>
-`;
-
-}else{
-
-html="<h3>No Task Available For Selected Date</h3>";
-
-}
-
-document.getElementById("details").innerHTML=html;
 
    
 </script>
